@@ -1,11 +1,11 @@
-import ProfileImage from "../assets/Profile Picture.jpeg";
+import ProfileImage from "../assets/Profile Picture.jpg";
 import { AiOutlineTwitter } from "react-icons/ai";
 
 const ProfilePic = () => {
   return (
     <div className="space-y-4 flex items-center justify-center flex-col">
       <img
-        className="h-32 w-32 rounded-full"
+        className="h-36 md:h-44 w-36 md:w-44 rounded-full"
         src={ProfileImage}
         alt="profile picture"
         id="profile_img"
