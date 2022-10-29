@@ -1,7 +1,7 @@
 import ProfileImage from "../assets/Profile Picture.jpg";
 import { AiOutlineTwitter, AiOutlineCamera } from "react-icons/ai";
 
-const ProfilePic = () => {
+const ProfileCard = () => {
   return (
     <div className="space-y-4 flex items-center justify-center flex-col">
       <div className="relative h-36 md:h-44 w-36 md:w-44 rounded-full cursor-pointer">
@@ -37,4 +37,4 @@ const ProfilePic = () => {
   );
 };
 
-export default ProfilePic;
+export default ProfileCard;

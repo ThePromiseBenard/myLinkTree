@@ -3,8 +3,8 @@ import IngressiveLogo from "../assets/Ingrsessive Logo.png";
 
 const Footer = () => {
   return (
-    <div className="mt-20 border-t-2 py-6 w-full ">
-      <div className="flex flex-wrap flex-col md:flex-row  gap-4 justify-between md:items-center">
+    <div className="mt-20 border-t-2 pt-6 w-full ">
+      <div className="flex flex-wrap   gap-4 justify-between md:items-center">
         <div>
           <img className="w-32" src={ZuriLogo} alt="" />
         </div>
