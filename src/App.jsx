@@ -1,12 +1,11 @@
-import LinkCard from "./conponents/LinkCard";
 import ProfilePic from "./conponents/ProfilePic";
-import Text from "./conponents/Text";
+import LinksCard from "./conponents/LinksCard";
+
 function App() {
   return (
-    <div className="container px-6 mx-auto gap-8 flex flex-col items-center justify-center py-20">
+    <div className="container px-6 mx-auto gap-8 flex flex-col items-center justify-center pb-20 py-10">
       <ProfilePic />
-      <LinkCard/>
-     
+      <LinksCard/>
     </div>
   );
 }
