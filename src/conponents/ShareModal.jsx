@@ -12,8 +12,8 @@ const ShareModal = ({ closeIcon }) => {
   const currentURL = window.location.href;
   return (
     <div className=" bg-black/50 fixed inset-0 flex items-center justify-center px-6">
-      <div className="bg-white w-full md:w-auto rounded-lg  space-y-32 md:space-y-44 p-10 md:p-16">
-        <div className="w-full space-y-14">
+      <div className="bg-white w-full h-96 md:h-[34rem] md:w-auto rounded-lg  space-y-8 md:space-y-16 p-10 md:p-16">
+        <div className="w-full space-y-14 md:space-y-24">
           <div className="flex justify-end cursor-pointer">
             <span>{closeIcon}</span>
           </div>
