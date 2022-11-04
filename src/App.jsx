@@ -10,7 +10,7 @@ function App() {
         <Route path="/" element={<Index />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      <div className="container px-6 mx-auto gap-8 flex flex-col items-center justify-center">
+      <div className="container pb-16 px-6 mx-auto gap-8 flex flex-col items-center justify-center">
         <Footer />
       </div>
     </BrowserRouter>

@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <div className="container px-6 mx-auto gap-8 flex flex-col items-center justify-center  py-10 md:py-44">
+    <div className="container px-6 mx-auto gap-8 flex flex-col items-center justify-center  py-10 md:py-24">
       <div className="space-y-4 w-full md:w-[720px]">
         <h2 className=" text-3xl md:text-4xl font-semibold capitalize">
           Contact Me
@@ -66,17 +66,22 @@ const Contact = () => {
             id="message"
             name="message"
             className="border border-gray-300 pt-2 pb-16 px-3 rounded-lg"
-            placeholder="yourname@email.com"
+            placeholder="Send me a message and I'll reply you as soon as possible..."
           ></textarea>
         </div>
         <div className="flex items-start md:items-center gap-2 md:gap-4">
           <input
             type="checkbox"
-            className="mt-1md:mt-0  md:p-2 border-gray-300 rounded focus:ring-0 text-gray-600 transition-all delay-75 ease-out "
+            className="mt-1 md:mt-0  md:p-2 border-gray-300 rounded focus:ring-0 text-blue-500 transition-all delay-75 ease-out "
           />
           <label className="text-gray-700/60 text-sm ">
             You agree to providing your data to Promise who may contact you.
           </label>
+        </div>
+        <div>
+          <button className="bg-blue-500 capitalize w-full text-center text-white font-semibold py-3 rounded-lg" type="submit" id="btn_submit">
+            Send message
+          </button>
         </div>
       </form>
     </div>
