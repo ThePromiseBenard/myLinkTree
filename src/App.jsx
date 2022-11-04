@@ -1,17 +1,15 @@
-import ProfileCard from "./conponents/ProfileCard";
-import LinksCard from "./conponents/LinksCard";
-import Footer from "./conponents/Footer";
-import IconsHolder from "./conponents/IconsHolder";
-import ShareModal from "./conponents/ShareModal";
+import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
+import Index from "./Pages";
+import Contact from "./Pages/contact";
 
 function App() {
   return (
-    <div className="container px-6 mx-auto gap-8 flex flex-col items-center justify-center pb-20 py-8">
-      <ProfileCard />
-      <LinksCard />
-      <IconsHolder />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

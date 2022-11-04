@@ -5,16 +5,16 @@ import ShareIcon from "./ShareIcon";
 const ProfileCard = () => {
   return (
     <div className="space-y-4 flex items-center justify-center w-full max-w-[1000px] ml-6">
-      <div className="flex items-center justify-center flex-col flex-1 md:flex-auto">
-        <div className="relative h-36 md:h-44 w-36 md:w-44 rounded-full cursor-pointer">
+      <div className="flex items-center justify-center flex-col  md:flex-auto">
+        <div className="relative h-20 w-20 rounded-full cursor-pointer">
           <img
-            className="h-36 md:h-44 w-36 md:w-44 rounded-full"
+            className="h-20 w-20 rounded-full"
             src={ProfileImage}
             alt="profile picture"
             id="profile_img"
           />
           <div className="text-white absolute w-full h-full rounded-full inset-0 opacity-0 hover:bg-black/50 hover:opacity-100  flex items-end justify-center transition-all delay-200 ease-in">
-            <AiOutlineCamera size={44} />
+            <AiOutlineCamera size={20} />
           </div>
         </div>
         <div className="text-center">
