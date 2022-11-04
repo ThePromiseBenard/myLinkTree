@@ -46,6 +46,10 @@ const LinksCard = () => {
       >
         Zuri's Design Book
       </Links>
+
+      <Links subText="Leave a message for me" url="/contact" id="contact">
+        Contact
+      </Links>
     </div>
   );
 };
