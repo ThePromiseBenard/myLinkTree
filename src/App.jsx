@@ -1,4 +1,4 @@
-import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Index from "./Pages";
 import Contact from "./Pages/contact";
 
