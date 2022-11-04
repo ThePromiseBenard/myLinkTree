@@ -3,8 +3,8 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      fontFamily:""
+      fontFamily: "",
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };

@@ -1,4 +1,5 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
+import Footer from "./conponents/Footer";
 import Index from "./Pages";
 import Contact from "./Pages/contact";
 
@@ -9,6 +10,9 @@ function App() {
         <Route path="/" element={<Index />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <div className="container px-6 mx-auto gap-8 flex flex-col items-center justify-center">
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 }
