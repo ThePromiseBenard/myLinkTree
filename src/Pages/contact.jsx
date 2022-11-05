@@ -23,11 +23,7 @@ const Contact = () => {
         .email("Invalid email address")
         .required("email address is empty"),
       message: yup.string().required("please enter a message"),
-      terms: yup
-        .array()
-        .required(
-          "you must agree to providing your data by clicking on the check box"
-        ),
+      terms: yup.bool().oneOf([true]).required("field must be checked"),
     }),
 
     // submit form
