@@ -2,7 +2,7 @@ import Links from "./Links";
 
 const LinksCard = () => {
   return (
-    <div className="w-full flex flex-col gap-4 md:gap-10 items-center justify-center">
+    <div className="w-full flex flex-col gap-4 md:gap-6 items-center justify-center">
       <Links subText="Link to my upcoming portfolio website" url="/#">
         thepromisebenard.com (comming soon)
       </Links>
@@ -48,7 +48,7 @@ const LinksCard = () => {
       </Links>
 
       <Links subText="Leave a message for me" url="/contact" id="contact">
-        Contact
+        Contact Me
       </Links>
     </div>
   );

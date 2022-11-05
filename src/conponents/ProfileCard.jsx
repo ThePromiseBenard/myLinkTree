@@ -4,7 +4,7 @@ import ShareIcon from "./ShareIcon";
 
 const ProfileCard = () => {
   return (
-    <div className="space-y-4 flex items-center justify-center w-full max-w-[1000px] ml-6">
+    <div className="space-y-4 flex items-center justify-center w-full max-w-[700px] ml-6">
       <div className="flex items-center justify-center flex-col  md:flex-auto">
         <div className="relative h-20 w-20 rounded-full cursor-pointer">
           <img

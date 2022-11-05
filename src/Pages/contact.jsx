@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
   const navigate = useNavigate();
+
   // Formik Logics
   const formik = useFormik({
     initialValues: {
@@ -30,17 +31,14 @@ const Contact = () => {
     }),
 
     // submit form
-
     onSubmit: () => {
       navigate("/");
     },
   });
 
-  console.log(formik.errors);
-
   return (
     <div className="container px-6 mx-auto gap-8 flex flex-col items-center justify-center  py-10 md:py-24">
-      <div className="space-y-4 w-full md:w-[720px]">
+      <div className="space-y-4 w-full md:w-[700px]">
         <h2 className=" text-3xl md:text-4xl font-semibold capitalize">
           Contact Me
         </h2>
