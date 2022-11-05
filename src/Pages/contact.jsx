@@ -1,7 +1,9 @@
 import { useFormik } from "formik";
 import * as yup from "yup";
+import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
+  const navigate = useNavigate();
   // Formik Logics
   const formik = useFormik({
     initialValues: {
@@ -29,8 +31,12 @@ const Contact = () => {
     }),
 
     // submit form
+
+    onSubmit: () => {
+      navigate("/");
+    },
   });
-  console.log(formik.values);
+
   console.log(formik.errors);
 
   return (
@@ -61,10 +67,14 @@ const Contact = () => {
               type="text"
               value={formik.values.firstName}
               onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
               name="firstName"
               className="border border-gray-300 py-2 px-3 rounded-lg"
               placeholder="Enter your first name"
             />
+            <span className="text-red-600 font-medium text-sm">
+              {formik.touched.firstName && formik.errors.firstName}
+            </span>
           </div>
           <div className="gap-1 flex flex-col flex-1">
             <label
@@ -77,11 +87,15 @@ const Contact = () => {
               id="last_name"
               value={formik.values.lastName}
               onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
               name="lastName"
               type="text"
               className="border border-gray-300 py-2 px-3 rounded-lg"
               placeholder="Enter your last name"
             />
+            <span className="text-red-600 font-medium text-sm">
+              {formik.touched.lastName && formik.errors.lastName}
+            </span>
           </div>
         </div>
         <div className="gap-1 flex flex-col flex-1">
@@ -98,8 +112,12 @@ const Contact = () => {
             placeholder="yourname@email.com"
             value={formik.values.email}
             onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
             name="email"
           />
+          <span className="text-red-600 font-medium text-sm">
+            {formik.touched.email && formik.errors.email}
+          </span>
         </div>
         <div className="gap-1 flex flex-col flex-1">
           <label
@@ -115,19 +133,31 @@ const Contact = () => {
             placeholder="Send me a message and I'll reply you as soon as possible..."
             value={formik.values.message}
             onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
           ></textarea>
+          <span className="text-red-600 font-medium text-sm">
+            {formik.touched.message && formik.errors.message}
+          </span>
         </div>
-        <div className="flex items-start md:items-center gap-2 md:gap-4">
-          <input
-            type="checkbox"
-            className="mt-1 md:mt-0  md:p-2 border-gray-300 rounded focus:ring-0 text-blue-500 transition-all delay-75 ease-out "
-            value={formik.values.terms}
-            onChange={formik.handleChange}
-            name="terms"
-          />
-          <label className="text-gray-700/60 text-sm ">
-            You agree to providing your data to Promise who may contact you.
-          </label>
+        <div>
+          <div className="flex items-start md:items-center gap-2 md:gap-4">
+            <input
+              type="checkbox"
+              className="mt-1 md:mt-0  md:p-2 border-gray-300 rounded focus:ring-0 text-blue-500 transition-all delay-75 ease-out "
+              value={formik.values.terms}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              name="terms"
+            />
+            <label className="text-gray-700/60 text-sm ">
+              You agree to providing your data to Promise who may contact you.
+            </label>
+          </div>
+          <span className="text-red-600 font-medium text-sm">
+            {formik.touched.terms && formik.errors.terms
+              ? formik.errors.terms
+              : ""}
+          </span>
         </div>
         <div>
           <button
